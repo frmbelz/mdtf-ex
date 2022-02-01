@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  fastapi:
+    image: fastapi
+    build : ./fastapi
+    network_mode: "host"
+    restart: unless-stopped
+    depends_on:
+      - mdtf-matching-system
+
+  mdtf-matching-system:
+    image: mdtf-matching-system
+    build : ./mdtf-matching-system/
+    restart: unless-stopped
+    ports:
+      - 8080:8080
+
+
+
+
+
