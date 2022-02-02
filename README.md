@@ -17,6 +17,9 @@ $ docker-compose up --build -d
 FastAPI API's should open at
 http://localhost:8181/
 
+API documentation
+http://localhost:8181/docs
+
 Go endpoint should be at
 http://localhost:8080/
 
